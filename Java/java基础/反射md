@@ -1,0 +1,16 @@
+获取class对象的三种方法
+
+```java
+//对象的getClass（）方法；
+//类的.class属性
+//Class.forName(String className)动态加载类，className需要是类的全限定名
+
+1、Class clazz3 = p.getClass();　　　　//通过类的实例获取该类的字节码文件对象，该类处于创建对象阶段
+
+2、Class clazz2 = Person.class;　　　　//当类被加载成.class文件时，此时Person类变成了.class，在获取该字节码文件对象，也就是获取自己， 该类处于字节码阶段。
+
+3、Class clazz1 = Class.forName("全限定类名");　　//通过Class类中的静态方法forName，直接获取到一个类的字节码文件对象，此时该类还是源文件阶段，并没有变为字节码文件。
+```
+
+
+
